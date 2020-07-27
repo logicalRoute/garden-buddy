@@ -14,7 +14,7 @@ class App extends Component {
   }
   
   componentDidMount = () => {
-    axios.get('http://harvesthelper.herokuapp.com/api/v1/plants?api_key=4bd977e41e7468b5633f1111f82d50be')
+    axios.get('https://harvesthelper.herokuapp.com/api/v1/plants?api_key=4bd977e41e7468b5633f1111f82d50be')
     .then((response) => {
       this.setState({ data: response.data})
       console.log(this.state.data);
