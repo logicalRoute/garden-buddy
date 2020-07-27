@@ -4,6 +4,8 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 import MainInfo from './MainInfo';
 
+import './css/App.css'
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -27,13 +29,15 @@ class App extends Component {
     let dataToPass = this.search(term, this.state.data);
     console.log('dataToPass: ', dataToPass);
     this.setState({ searchTerm: term, dataPass: dataToPass});
-    console.log(this.state.dataToPass);
+    console.log('Individual veggie: ', this.state.dataToPass);
     //Grab the data based upon search term
   }
 
   search = (nameKey, array) => {
+    let searchName = nameKey.toLowerCase();
     for(let i = 0; i < array.length; i++){
-      if(array[i].name.toLowerCase() === nameKey) {
+      let name = array[i].name.toLowerCase();
+      if(name === searchName || name.includes(searchName)) {
         return array[i];
       }
     }
@@ -46,7 +50,9 @@ class App extends Component {
         onSubmit={this.onSubmit}
       />
       <MainInfo 
-        data={this.dataPass}
+        imageUrl={this.state.dataPass.image_url}
+        name={this.state.dataPass.name}
+        description={this.state.dataPass.description}
       />
       {this.state.searchTerm}
     </div>
