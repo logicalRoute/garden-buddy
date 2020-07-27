@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/garden-buddy/static/css/main.991b3918.chunk.css",
+    "main.js": "/garden-buddy/static/js/main.7e82d4ad.chunk.js",
+    "main.js.map": "/garden-buddy/static/js/main.7e82d4ad.chunk.js.map",
+    "runtime-main.js": "/garden-buddy/static/js/runtime-main.c6303cb7.js",
+    "runtime-main.js.map": "/garden-buddy/static/js/runtime-main.c6303cb7.js.map",
+    "static/js/2.007a3a29.chunk.js": "/garden-buddy/static/js/2.007a3a29.chunk.js",
+    "static/js/2.007a3a29.chunk.js.map": "/garden-buddy/static/js/2.007a3a29.chunk.js.map",
+    "index.html": "/garden-buddy/index.html",
+    "precache-manifest.8a9311ae87c0c0b0d5faeb90a647f40b.js": "/garden-buddy/precache-manifest.8a9311ae87c0c0b0d5faeb90a647f40b.js",
+    "service-worker.js": "/garden-buddy/service-worker.js",
+    "static/css/main.991b3918.chunk.css.map": "/garden-buddy/static/css/main.991b3918.chunk.css.map",
+    "static/js/2.007a3a29.chunk.js.LICENSE.txt": "/garden-buddy/static/js/2.007a3a29.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c6303cb7.js",
+    "static/js/2.007a3a29.chunk.js",
+    "static/css/main.991b3918.chunk.css",
+    "static/js/main.7e82d4ad.chunk.js"
+  ]
+}

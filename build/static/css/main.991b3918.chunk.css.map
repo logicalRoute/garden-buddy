@@ -1,0 +1,1 @@
+{"version":3,"sources":["MainInfo.css","App.css"],"names":[],"mappings":"AAAA,cACE,UAAW,CACX,iBACF,CCHA,KACE,sCACF","file":"main.991b3918.chunk.css","sourcesContent":[".MainInfo img {\r\n  width: 64px;\r\n  border-radius: 5px;\r\n}","body {\r\n  font-family: Arial, Helvetica, sans-serif;\r\n}"]}
