@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './css/SearchBar.css';
+
 class SearchBar extends Component {
   constructor(props){
     super(props);
@@ -13,13 +15,14 @@ class SearchBar extends Component {
 
   render(){
     return(
-      <div>
+      <div className="SearchBar">
         <form onSubmit={this.onFormSubmit}>
           <label>Enter a veggie: </label>
           <input 
             type="text"
             value={this.state.searchTerm}
             onChange={(e) => this.setState({searchTerm: e.target.value})}/>
+          <p>{this.props.errorMessage}</p>
         </form>
       </div>
     );

@@ -1,0 +1,15 @@
+.SearchBar {
+  text-align: center;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.SearchBar p,
+input,
+label {
+  font-size: 3rem;
+}

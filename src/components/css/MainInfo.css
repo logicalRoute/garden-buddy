@@ -1,4 +1,32 @@
+.MainInfo {
+  border: 1px solid black;
+  width: 33.3%;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 400px;
+}
+
+.MainInfo-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px auto;
+}
+
 .MainInfo img {
-  width: 64px;
-  border-radius: 5px;
+  width: 200px;
+  max-height: 150px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.MainInfo h2 {
+  font-size: 4rem;
+}
+.MainInfo p {
+  text-align: left;
+  font-size: 1.5rem;
+
 }
