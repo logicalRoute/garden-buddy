@@ -18,7 +18,8 @@ class App extends Component {
       data: [], 
       searchTerm: '', 
       dataPass: {},
-      errorMessage: 'Waiting for user input...'
+      errorMessage: 'Waiting for user input...',
+      isLoaded: false
     };
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -26,7 +27,7 @@ class App extends Component {
   componentDidMount = () => {
     axios.get('https://garden-buddy-backend.herokuapp.com/veggies')
     .then((response) => {
-      this.setState({ data: response.data})
+      this.setState({ data: response.data, isLoaded: true})
       console.log(this.state.data);
     })
     .catch(function (error) {
@@ -58,12 +59,13 @@ class App extends Component {
   }
 
   render() {
-    
     return (
+      
     <div className="App">
       <SearchBar 
         onSubmit={this.onSubmit}
         errorMessage={this.state.errorMessage}
+        shouldLoad={this.state.isLoaded}
       />
       {this.state.searchTerm &&
         <div className="container">
