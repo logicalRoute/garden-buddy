@@ -21,7 +21,9 @@ class SearchBar extends Component {
           <input 
             type="text"
             value={this.state.searchTerm}
-            onChange={(e) => this.setState({searchTerm: e.target.value})}/>
+            onChange={(e) => this.setState({searchTerm: e.target.value})}
+            disabled={!this.props.shouldLoad}
+          />
           <p>{this.props.errorMessage}</p>
         </form>
       </div>
