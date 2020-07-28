@@ -23,14 +23,6 @@ p {
 
 }
 
-.App-top {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: top;
-}
 
-.App-middle {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: top;
-}
+
+
