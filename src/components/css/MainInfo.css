@@ -23,9 +23,17 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+@media(min-width: 768px){
+  .MainInfo img{
+    width: 400px;
+    max-height: 250px;
+  }
+}
+
 .MainInfo h2 {
   font-size: 2.5rem;
   margin-bottom: 0;
+  padding: 30px;
 }
 .MainInfo p {
   text-align: left;
