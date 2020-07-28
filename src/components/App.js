@@ -18,7 +18,7 @@ class App extends Component {
       data: [], 
       searchTerm: '', 
       dataPass: {},
-      errorMessage: 'Waiting for user input...',
+      errorMessage: 'Loading database...',
       isLoaded: false
     };
     this.onSubmit = this.onSubmit.bind(this);
@@ -27,7 +27,10 @@ class App extends Component {
   componentDidMount = () => {
     axios.get('https://garden-buddy-backend.herokuapp.com/veggies')
     .then((response) => {
-      this.setState({ data: response.data, isLoaded: true})
+      this.setState({ 
+        data: response.data, 
+        isLoaded: true,
+        errorMessage: 'Waiting for user input...'});
       console.log(this.state.data);
     })
     .catch(function (error) {
