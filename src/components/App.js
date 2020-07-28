@@ -3,18 +3,28 @@ import axios from 'axios';
 
 import SearchBar from './SearchBar';
 import MainInfo from './MainInfo';
+import Optimal from './Optimal';
+import Planting from './Planting';
+import Care from './Care';
+import WatchFor from './WatchFor';
+import HarvestingStorage from './HarvestingStorage';
 
 import './css/App.css'
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = { data: [], searchTerm: '', dataPass: {}};
+    this.state = { 
+      data: [], 
+      searchTerm: '', 
+      dataPass: {},
+      errorMessage: 'Waiting for user input...'
+    };
     this.onSubmit = this.onSubmit.bind(this);
   }
   
   componentDidMount = () => {
-    axios.get('http://harvesthelper.herokuapp.com/api/v1/plants?api_key=4bd977e41e7468b5633f1111f82d50be')
+    axios.get('http://localhost:3007/veggies')
     .then((response) => {
       this.setState({ data: response.data})
       console.log(this.state.data);
@@ -27,10 +37,14 @@ class App extends Component {
   onSubmit = (term) => {
     console.log('term:', term);
     let dataToPass = this.search(term, this.state.data);
-    console.log('dataToPass: ', dataToPass);
-    this.setState({ searchTerm: term, dataPass: dataToPass});
-    console.log('Individual veggie: ', this.state.dataToPass);
-    //Grab the data based upon search term
+    if(dataToPass){
+      this.setState({ 
+        searchTerm: term, 
+        dataPass: dataToPass,
+        errorMessage: `${dataToPass.name} was found in the database.`});
+    } else {
+      this.setState({ errorMessage: `${term} was not found. Please search again.`})
+    }
   }
 
   search = (nameKey, array) => {
@@ -44,17 +58,50 @@ class App extends Component {
   }
 
   render() {
+    
     return (
-    <div>
+    <div className="App">
       <SearchBar 
         onSubmit={this.onSubmit}
+        errorMessage={this.state.errorMessage}
       />
-      <MainInfo 
-        imageUrl={this.state.dataPass.image_url}
-        name={this.state.dataPass.name}
-        description={this.state.dataPass.description}
-      />
-      {this.state.searchTerm}
+      {this.state.searchTerm &&
+        <div className="App-body">
+          <div className="App-top">
+            <MainInfo 
+              imageUrl={this.state.dataPass.image_url}
+              name={this.state.dataPass.name}
+              description={this.state.dataPass.description}
+            />
+            <Optimal 
+              optimalSun={this.state.dataPass.optimal_sun}
+              optimalSoil={this.state.dataPass.optimal_soil}
+            />
+            <Planting 
+              name={this.state.dataPass.name}
+              whenToPlant={this.state.dataPass.when_to_plant}  
+              growingFromSeed={this.state.dataPass.growing_from_seed}  
+              spacing={this.state.dataPass.spacing}  
+              transplanting={this.state.dataPass.transplanting}  
+            />
+          </div>
+          <div className="App-middle">
+            <Care 
+              watering={this.state.dataPass.watering}
+              feeding={this.state.dataPass.feeding}
+              otherCare={this.state.dataPass.other_care}
+            />
+            <WatchFor 
+              diseases={this.state.dataPass.diseases}
+              pests={this.state.dataPass.pests}
+            />
+            <HarvestingStorage 
+              harvesting={this.state.dataPass.harvesting}
+              storageUse={this.state.dataPass.storage_use}
+              harvestingDays={this.state.dataPass.harvesting_days}
+            />
+          </div>
+        </div>}
     </div>
     );
   }

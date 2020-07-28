@@ -1,0 +1,30 @@
+.SearchBar {
+  text-align: center;
+  border: 2px solid black;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.SearchBar 
+input,
+label {
+  font-size: 3rem;
+}
+
+.SearchBar p {
+  font-size: 2rem;
+}
+
+.SearchBar input {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+}
+
+.Searchbar input:focus {
+  outline: green;
+}

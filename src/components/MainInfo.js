@@ -13,8 +13,10 @@ class MainInfo extends Component {
     }
     return(
       <div className="MainInfo">
-        <img src={formattedUrl} alt={this.props.name} />
-        <h4>{this.props.name}</h4>
+        <div className="MainInfo-header">
+          <img src={formattedUrl} alt={this.props.name} />
+          <h2>{this.props.name}</h2>
+        </div>
         <p>{this.props.description}</p>
       </div>
     );
