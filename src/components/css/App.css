@@ -4,13 +4,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: 'Roboto', sans-serif;
   text-align: center;
-
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.unsplash.com/photo-1565548058679-92505f4fad6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
   padding: 15px;
 
+}
+
+.App {
+  
 }
 
 
