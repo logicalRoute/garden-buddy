@@ -44,11 +44,11 @@ class Optimal extends Component {
     return (
       <div className="Optimal">
         <h2>Optimal Conditions</h2>
-        <p><strong>Optimal Sunlight: &nbsp;&nbsp;</strong>{this.props.optimalSun}</p>
+        <p><strong>Sunlight: &nbsp;&nbsp;</strong>{this.props.optimalSun}</p>
         <i className={sunIcon}></i>
-        <p><strong>Optimal Soil: &nbsp;&nbsp;</strong>{this.props.optimalSoil}</p>
-        <p><strong>Soil: &nbsp;&nbsp;</strong><i className={soilType}></i></p>
-        <p><strong>pH: &nbsp;&nbsp;</strong><i className={soilPh}></i></p>
+        <p><strong>Soil: &nbsp;&nbsp;</strong>{this.props.optimalSoil}</p>
+        <p><i className={soilType}></i></p>
+        <p><i className={soilPh}></i></p>
       </div>
       
     );

@@ -6,7 +6,7 @@ class Planting extends Component {
   render() {
     return (
       <div className="Planting">
-        <h2>How to plant {this.props.name}</h2>
+        <h2>Planting {this.props.name}</h2>
         <p><strong>When to Plant: </strong>{this.props.whenToPlant}</p>
         <p><strong>Growing from seed: </strong>{this.props.growingFromSeed}</p>
         <p><strong>Spacing: </strong>{this.props.spacing}</p>

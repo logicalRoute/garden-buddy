@@ -24,7 +24,7 @@ class App extends Component {
   }
   
   componentDidMount = () => {
-    axios.get('http://localhost:3007/veggies')
+    axios.get('https://garden-buddy-backend.herokuapp.com/veggies')
     .then((response) => {
       this.setState({ data: response.data})
       console.log(this.state.data);
@@ -66,13 +66,13 @@ class App extends Component {
         errorMessage={this.state.errorMessage}
       />
       {this.state.searchTerm &&
-        <div className="App-body">
-          <div className="App-top">
+        <div className="container">
+          <div className="row">
             <MainInfo 
-              imageUrl={this.state.dataPass.image_url}
-              name={this.state.dataPass.name}
-              description={this.state.dataPass.description}
-            />
+                imageUrl={this.state.dataPass.image_url}
+                name={this.state.dataPass.name}
+                description={this.state.dataPass.description}
+              />
             <Optimal 
               optimalSun={this.state.dataPass.optimal_sun}
               optimalSoil={this.state.dataPass.optimal_soil}
@@ -85,7 +85,10 @@ class App extends Component {
               transplanting={this.state.dataPass.transplanting}  
             />
           </div>
-          <div className="App-middle">
+          
+            
+          
+          <div className="row">
             <Care 
               watering={this.state.dataPass.watering}
               feeding={this.state.dataPass.feeding}

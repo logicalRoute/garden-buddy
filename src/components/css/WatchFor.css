@@ -1,8 +1,7 @@
 .WatchFor {
   border: 2px solid black;
-  width: 30%;
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  min-height: 400px;
-  margin-top: 20px;
+  width: 100%;
+  padding-top: 15px;
 }
