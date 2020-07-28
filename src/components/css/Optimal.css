@@ -1,9 +1,20 @@
 .Optimal {
-  border: 1px solid black;
-  width: 33.3%;
-  border-radius: 3px;
+  border: 2px solid black;
+  width: 30%;
+  border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  height: 400px;
+  min-height: 400px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@media(max-width: 768px){
+  .Optimal {
+    width: 100%;
+    flex-shrink: 0;
+  }
 }
 
 .Optimal p {
