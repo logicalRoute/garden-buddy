@@ -13,6 +13,12 @@
     width: 70%;
   }
 }
+
+@media(max-width: 768px){
+  .SearchBar{
+    margin-top: 0;
+  }
+}
 .SearchBar 
 input,
 label {
