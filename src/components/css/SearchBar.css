@@ -8,6 +8,7 @@
   margin: 20px auto;
   width: 100%;
 }
+
 @media(min-width: 768px){
   .SearchBar{
     width: 70%;
@@ -17,6 +18,8 @@
 @media(max-width: 768px){
   .SearchBar{
     margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
   }
 }
 .SearchBar 

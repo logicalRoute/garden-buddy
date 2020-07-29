@@ -26,13 +26,27 @@ p {
   padding: 15px;
 
 }
+h1 {
+  font-size: 5rem; 
+}
 
+footer h4 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 @media(max-width: 768px){
   body {
     border-radius: 0px;
   }
+  h1{
+    font-size: 2.5rem;
+  }
 }
 
+
+
+.title-text {
+  color: rgb(15, 194, 15);
+}
 
 
 

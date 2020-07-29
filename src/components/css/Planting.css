@@ -7,6 +7,11 @@
   padding-top: 10px;
 }
 
+@media(max-width: 768px){
+  .Planting {
+    border-radius: 0px;
+  }
+}
 .Planting h2 {
   text-align: center;
   padding:20px;

@@ -5,6 +5,12 @@
   padding-top: 15px;
 }
 
+@media(max-width: 768px){
+  .HarvestingStorage {
+    border-radius: 0px;
+  }
+}
+
 .HarvestingStorage p {
   padding: 20px;
   text-align: left;
