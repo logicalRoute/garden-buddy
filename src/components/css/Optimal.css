@@ -6,6 +6,11 @@
   padding-top: 10px;
 }
 
+@media(max-width: 768px){
+  .Optimal {
+    border-radius: 0px;
+  }
+}
 
 
 .Optimal p {

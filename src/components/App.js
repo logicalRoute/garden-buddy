@@ -65,6 +65,7 @@ class App extends Component {
     return (
       
     <div className="App">
+      <h1><span className="title-text"><i className="fas fa-seedling fa-1x"></i> Garden</span> Buddy</h1>
       <SearchBar 
         onSubmit={this.onSubmit}
         errorMessage={this.state.errorMessage}
@@ -90,9 +91,6 @@ class App extends Component {
               transplanting={this.state.dataPass.transplanting}  
             />
           </div>
-          
-            
-          
           <div className="row">
             <Care 
               watering={this.state.dataPass.watering}
@@ -110,6 +108,9 @@ class App extends Component {
             />
           </div>
         </div>}
+        <footer>
+          <h4><span class="title-text">&copy; 2020 Garden</span> Buddy</h4>
+        </footer>
     </div>
     );
   }
